@@ -1,0 +1,66 @@
+
+<!-- <div class="cyfron-space"> -->
+<!--   <div class="cyfron-input-el"> -->
+<!--     <i class="fa fa-arrow-circle-right fa-2x cyfron-input-icon"></i> -->
+<!--     <input type="number" class="topcoat-text-input" placeholder="Add your distance" ng-model="item.distance"> -->
+<!--   </div> -->
+    
+<!--   <div class="cyfron-input-el"> -->
+<!--     <i class="fa fa-arrow-circle-right fa-2x cyfron-input-icon"></i> -->
+<!--     <input type="number" class="topcoat-text-input" placeholder="Price of liter" ng-model="item.priceOfLiter"> -->
+<!--   </div> -->
+
+<!--   <div class="cyfron-input-el"> -->
+<!--     <i class="fa fa-arrow-circle-right fa-2x cyfron-input-icon"></i> -->
+<!--     <input type="number" class="topcoat-text-input" placeholder="How many liters" ng-model="item.refueled"> -->
+<!--   </div> -->
+
+<!--   <div class="cyfron-input-el"> -->
+<!--     <i class="fa fa-arrow-circle-right fa-2x cyfron-input-icon"></i> -->
+<!--     <input type="text" class="topcoat-text-input" placeholder="Add date" ng-model="item.date"> -->
+<!--   </div> -->
+  
+<!--   <a ng-click="add()"><b>Add</b></a> -->
+<!-- </div> -->
+
+<!-- dialogs first is important for ~ selector -->
+<div class="effeckt-modal-wrap" id="effeckt-modal-wrap" ng-style="s" ng-class="modalWrap">
+
+  <div class="effeckt-modal topcoat-overlay" id="effeckt-modal">
+    <h1>Wprowadz dane:</h1>
+    <div class="effeckt-modal-content">
+
+<div class="cyfron-space">
+  <div class="cyfron-input-el">
+    <i class="fa fa-arrow-circle-right fa-2x cyfron-input-icon"></i>
+    <input type="number" class="topcoat-text-input" placeholder="Add your distance" ng-model="item.distance">
+  </div>
+    
+  <div class="cyfron-input-el">
+    <i class="fa fa-arrow-circle-right fa-2x cyfron-input-icon"></i>
+    <input type="number" class="topcoat-text-input" placeholder="Price of liter" ng-model="item.priceOfLiter">
+  </div>
+
+  <div class="cyfron-input-el">
+    <i class="fa fa-arrow-circle-right fa-2x cyfron-input-icon"></i>
+    <input type="number" class="topcoat-text-input" placeholder="How many liters" ng-model="item.refueled">
+  </div>
+
+  <div class="cyfron-input-el">
+    <i class="fa fa-arrow-circle-right fa-2x cyfron-input-icon"></i>
+    <input type="text" class="topcoat-text-input" placeholder="Add date" ng-model="item.date">
+  </div>
+  
+</div>
+
+
+      
+    </div>
+    <div class='topcoat-overlay-buttons'>
+      <button class="effeckt-modal-close topcoat-button" ng-click="add()">Add</button>
+      <button class="effeckt-modal-close topcoat-button--cta" ng-click="go('/fuel-manager')">Close me!</button>
+    </div>
+  </div>
+</div>
+<!-- overlay coming after is important for ~ selector -->
+<div class="effeckt-overlay no-transitions" id="effeckt-overlay" ng-class="overlay"></div>

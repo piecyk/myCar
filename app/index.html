@@ -1,0 +1,76 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+  <!-- TODO: ehhh kurwa -->
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  
+  <!-- build:css styles/vendor.css -->
+  <link rel="stylesheet" href="styles/topcoat/topcoat-mobile-light.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body ng-app="yoMyCarApp">
+
+  <div id="left-nav">
+    <div class="title">Menu</div>
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-check-square"></i>List icons (like these)</li>
+      <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+      <li><i class="fa-li fa fa-spinner fa-spin"></i>to replace</li>
+      <li><i class="fa-li fa fa-square"></i>default bullets in lists</li>
+    </ul>
+  </div>
+  
+  <div class="transition" ng-class="class">
+    CLASS:{{class}}
+    <!-- cyfron header -->
+    <header class="topcoat-navigation-bar">
+      <div class="topcoat-navigation-bar__item left quarter">
+        <i class="fa fa-bars fa-2x cyfron-menu-icon-left" ng-click="class = class ? '': 'offset' "></i>
+        <i class="fa fa-home fa-2x cyfron-menu-icon-left" ng-click="go('/')"></i>
+      </div>
+      <div class="topcoat-navigation-bar__item center half">
+        <h1>my Car</h1>
+      </div>
+      <div class="topcoat-navigation-bar__item right quarter">
+        <div class="cyfron-menu-icon-right" c-change-lang></div>
+      </div>
+    </header>
+  
+    <!-- Add your site or application content here -->
+    <div id="content" ng-view></div>
+  </div>
+  
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/d3/d3.js"></script>
+  <script src="bower_components/momentjs/moment.js"></script>
+  <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+  <!-- endbower -->
+  <script src="bower_components/momentjs/lang/pl.js"></script>
+  <!-- endbuild -->
+  
+  <script type="text/javascript" src="cordova.js"></script>
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/resource.js"></script>
+  <script src="scripts/settings.js"></script>
+  <script src="scripts/locale.js"></script>
+  <!-- split this to module-->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/fuel.js"></script>
+  <script src="scripts/fuel-model.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

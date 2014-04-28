@@ -1,0 +1,21 @@
+
+
+
+
+<br>
+L:{{$locale}}
+<br>
+<div class="topcoat-list" ng-repeat="item in model.array">
+  <h3 class="topcoat-list__header"><i class="fa fa-info-circle"></i> {{item.date}}</h3>
+  <ul class="topcoat-list__container">
+    <li class="topcoat-list__item">
+      Distance : {{item.distance}} km
+    </li>
+    <li class="topcoat-list__item">
+      <i class="fa fa-money"></i> Price of liter: {{item.priceOfLiter | currency:$locale.NUMBER_FORMATS.CURRENCY_SYM }} 
+    </li>
+    <li class="topcoat-list__item">
+      Refueled: {{item.refueled}} l
+    </li>
+  </ul>
+</div>
